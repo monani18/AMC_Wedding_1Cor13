@@ -42,7 +42,7 @@ class Person {
 };
 
 Person apply1Cor13(Person person) {
-	person.envy--;
+  person.envy--;
   person.boasting--;
   person.arrogance--;
   person.rudeness--;
@@ -72,9 +72,9 @@ int main() {
   cout << "1 Corinthians 13:4–7 (ESV):" << endl << "Love is patient and kind; " << endl << "love does not envy or boast; " << endl << "it is not arrogant or rude." << endl << "It does not insist on its own way; " << endl << "it is not irritable or resentful; " << endl << "it does not rejoice at wrongdoing, but rejoices with the truth." << endl << "Love bears all things, believes all things, hopes all things, endures all things." << endl << endl;
   
   while (your_days < death_date) { // until death do you part
-  	cout << "Day " << your_days << endl;
+    cout << "Day " << your_days << endl;
 
-	//example characteristics to print
+    //example characteristics to print
     cout << "Andy's patience: " << Andy.patience << endl;
     cout << "Anna Marie's kindness: " << Anna_Marie.kindness << endl;
     cout << "Andy's envy: " << Andy.envy << endl;
@@ -85,16 +85,16 @@ int main() {
     cout << "Anna Marie's irritability: " << Anna_Marie.irritability << endl;
     cout << "Andy's resentment: " << Andy.resentment << endl;
     cout << "Anna Marie's rejoicing in wrongdoing: " << Anna_Marie.rejoicing_in_wrongdoing << endl;
-	  cout << "Andy's rejoicing in the truth: " << Andy.rejoicing_in_truth << endl;
+    cout << "Andy's rejoicing in the truth: " << Andy.rejoicing_in_truth << endl;
     cout << "Anna Marie's capacity to bear: " << Anna_Marie.capacity_to_bear << endl;
     cout << "Andy's capacity to believe: " << Andy.capacity_to_believe << endl;
     cout << "Anna Marie's capacity to hope: " << Anna_Marie.capacity_to_believe << endl;
     cout << "Andy's capacity to endure: " << Andy.capacity_to_endure << endl << endl;
     
-	  Andy = apply1Cor13(Andy);
+    Andy = apply1Cor13(Andy);
     Anna_Marie = apply1Cor13(Anna_Marie);
     your_days++;
-  	}
-    cout << "And so on!" << endl;
+  }
+  cout << "And so on!" << endl;
   return 0;
 }
