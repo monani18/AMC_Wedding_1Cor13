@@ -1,0 +1,100 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person {
+  public:
+    string name;
+    int envy;
+    int boasting;
+    int arrogance;
+    int rudeness;
+    int selfish_insistence;
+    int irritability;
+    int resentment;
+    int rejoicing_in_wrongdoing;
+    int patience;
+    int kindness;
+    int rejoicing_in_truth;
+    int capacity_to_bear;
+    int capacity_to_believe;
+    int capacity_to_hope;
+    int capacity_to_endure;
+    
+    Person(string x, int a, int b, int c, int d, int e, int f, int g, int h, int i, int j, int k, int l, int m, int n, int o) {
+      name = x;
+      envy = a;
+      boasting = b;
+      arrogance = c;
+      rudeness = d;
+      selfish_insistence = e;
+      irritability = f;
+      resentment = g;
+      rejoicing_in_wrongdoing = h;
+      patience = i;
+      kindness = j;
+      rejoicing_in_truth = k;
+      capacity_to_bear = l;
+      capacity_to_believe = m;
+      capacity_to_hope = n;
+      capacity_to_endure = o;
+    };
+};
+
+Person apply1Cor13(Person person) {
+	person.envy--;
+  person.boasting--;
+  person.arrogance--;
+  person.rudeness--;
+  person.selfish_insistence--;
+  person.irritability--;
+  person.resentment--;
+  person.rejoicing_in_wrongdoing--;
+  person.patience++;
+  person.kindness++;
+  person.rejoicing_in_truth++;
+  person.capacity_to_bear++;
+  person.capacity_to_believe++;
+  person.capacity_to_hope++;
+  person.capacity_to_endure++;
+  return person;
+};
+  
+int main() {
+  Person Andy = Person("Andy", 1000000, 1000000, 1000000, 1000000, 1000000, 1000000, 1000000, 1000000, 1, 1, 1, 1, 1, 1, 1); //really simplifying quantities for how much envy, boasting, patience, etc. are in the heart; only God can search that.
+  Person Anna_Marie = Person("Anna_Marie", 1000000, 1000000, 1000000, 1000000, 1000000, 1000000, 1000000, 1000000, 1, 1, 1, 1, 1, 1, 1);
+  
+  int your_days = 0; // initialize your days together, starting today 👰‍♀️
+  int end_date = 10;
+  int death_date = end_date; // 20000 is the more realistic number for life expectancy, but I changed it to an arbitrary end date so it doesn't print a ton
+  
+  cout << "Disclaimer: This is a super simplified thought experiment, of course. All estimated quantities are made up." << endl << endl;
+  cout << "1 Corinthians 13:4–7 (ESV):" << endl << "Love is patient and kind; " << endl << "love does not envy or boast; " << endl << "it is not arrogant or rude." << endl << "It does not insist on its own way; " << endl << "it is not irritable or resentful; " << endl << "it does not rejoice at wrongdoing, but rejoices with the truth." << endl << "Love bears all things, believes all things, hopes all things, endures all things." << endl << endl;
+  
+  while (your_days < death_date) { // until death do you part
+  	cout << "Day " << your_days << endl;
+
+	//example characteristics to print
+    cout << "Andy's patience: " << Andy.patience << endl;
+    cout << "Anna Marie's kindness: " << Anna_Marie.kindness << endl;
+    cout << "Andy's envy: " << Andy.envy << endl;
+    cout << "Anna Marie's boasting: " << Anna_Marie.boasting << endl;
+    cout << "Andy's arrogance: " << Andy.arrogance << endl;
+    cout << "Anna Marie's rudeness: " << Anna_Marie.rudeness << endl;
+    cout << "Andy's selfish insistence: " << Andy.selfish_insistence << endl;
+    cout << "Anna Marie's irritability: " << Anna_Marie.irritability << endl;
+    cout << "Andy's resentment: " << Andy.resentment << endl;
+    cout << "Anna Marie's rejoicing in wrongdoing: " << Anna_Marie.rejoicing_in_wrongdoing << endl;
+	  cout << "Andy's rejoicing in the truth: " << Andy.rejoicing_in_truth << endl;
+    cout << "Anna Marie's capacity to bear: " << Anna_Marie.capacity_to_bear << endl;
+    cout << "Andy's capacity to believe: " << Andy.capacity_to_believe << endl;
+    cout << "Anna Marie's capacity to hope: " << Anna_Marie.capacity_to_believe << endl;
+    cout << "Andy's capacity to endure: " << Andy.capacity_to_endure << endl << endl;
+    
+	  Andy = apply1Cor13(Andy);
+    Anna_Marie = apply1Cor13(Anna_Marie);
+    your_days++;
+  	}
+    cout << "And so on!" << endl;
+  return 0;
+}
